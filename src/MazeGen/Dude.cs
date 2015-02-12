@@ -2,14 +2,24 @@
 
 namespace MazeGen
 {
+    /// <summary>
+    /// Represents a dude running around the maze, trying to solve it.
+    /// </summary>
     public class Dude
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Dude" /> class.
+        /// </summary>
         public Dude()
         {
             Reset();
         }
 
+        /// <summary>
+        /// Gets or sets the Maze for this Dude to run around in.
+        /// </summary>
         public Maze Maze { get; set; }
+
         public Direction Direction { get; private set; }
         public int Cell { get; private set; }
 

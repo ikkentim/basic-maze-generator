@@ -10,6 +10,7 @@ namespace MazeGen
         public DisjointSet(int capacity)
         {
             _data = Enumerable.Repeat(-1, capacity).ToArray();
+            Count = capacity;
         }
 
         public int this[int i]
@@ -17,10 +18,7 @@ namespace MazeGen
             get { return _data[i]; }
         }
 
-        public int Count
-        {
-            get { return _data.Count(n => n < 0); }
-        }
+        public int Count { get; private set; }
 
         public int Find(int element)
         {
@@ -51,6 +49,8 @@ namespace MazeGen
                 _data[element1] = element2;
                 _data[element2]--;
             }
+
+            Count--;
         }
     }
 }

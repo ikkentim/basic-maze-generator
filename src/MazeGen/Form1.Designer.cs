@@ -1,6 +1,6 @@
 ﻿namespace MazeGen
 {
-    partial class Form1
+    sealed partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             // solverTimer
             // 
             this.solverTimer.Enabled = true;
-            this.solverTimer.Interval = 5;
+            this.solverTimer.Interval = 1;
             this.solverTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
